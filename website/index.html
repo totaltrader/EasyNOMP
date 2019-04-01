@@ -85,10 +85,10 @@
 
     <body>
         <header>
-            <nav id="topNavBar" class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap px-0" style="height: 40px;">
+            <nav id="topNavBar" class="navbar navbar-dark fixed-top bg-dark flex-md-nowrap px-0" style="height: 50px;">
 		    
 					{{ if ((it.portalConfig.poollogo !== "undefined") & (it.portalConfig.poollogo !== "")) { }}
-						<img src='{{=it.portalConfig.poollogo}}' />
+						<img src='{{=it.portalConfig.poollogo}}' height="100%" />
 					{{ } else { }}
 						<span style="font-size: 18px; color: white;">&nbsp;&nbsp;<b>{{=it.portalConfig.poolname}}</b></span>
 					{{ } }}
@@ -248,7 +248,7 @@
         
             <!-- Sidebar -->
             <div id="sidebar-wrapper" class="bg-dark toggled">
-                <ul class="sidebar-nav" style="margin-top: 40px;">
+                <ul class="sidebar-nav" style="margin-top: 50px;">
                     <li>
                         <a href="#menu-toggle" id="menu-toggle"><i class="fa fa-bars sidebar-icon"></i> Toggle Menu</a>
                     </li>
@@ -290,16 +290,16 @@
                 <div class="container-fluid px-0 pt-4">
 			<div style="position:relative;float:middle;display:block;top:16px;">
 			{{ if (it.portalConfig.devmode) { }}
-                        	<!--<span style="display:block;height: 15px;">-->
-                			<h4 style="margin:2px 0 0 0;color:red; border:1px red dashed; text-align: center; vertical-align:middle;">POOL IS IN DEVELOPMENT MODE! ANY BUGS ARE ONLY TEMPORARY!</h4>
+                        	<span style="display:block;height: 15px;">
+                			<h4 style="margin:14px 0 0 0;color:red; border:1px red dashed; text-align: center; vertical-align:middle;">POOL IS IN DEVELOPMENT MODE! ANY BUGS ARE ONLY TEMPORARY!</h4>
 					<!--<a href="http://miningpool.easyx.info/devmode.html" target="_blank">Wtf is this?</a>-->
-				<!--</span>-->
+				</span>
 	                {{ } }}
 			<!--<br />-->
 			{{ if ((it.portalConfig.poolwarningmsg !== "undefined") & (it.portalConfig.poolwarningmsg !== "")) { }}
-				<!--<span style="display:block;height: 15px;">-->
-					<h4 style="clear:left;margin:2px 0 0 0;color:red; border:1px red dashed; text-align: center; vertical-align:middle;">{{=it.portalConfig.poolwarningmsg}}</h4>
-				<!--</span>-->                
+				<span style="display:block;height: 15px;">
+					<h4 style="margin:14px 0 0 0;color:red; border:1px red dashed; text-align: center; vertical-align:middle;">{{=it.portalConfig.poolwarningmsg}}</h4>
+				</span>                
 	                {{ } }}
                 	</div>
 			<main id="mainContent">
