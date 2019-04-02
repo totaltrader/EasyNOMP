@@ -239,7 +239,7 @@ function SetupForPool(poolOptions, setupFinished) {
           logger.debug("Redis responsed: %s", JSON.stringify(results));
           endRedisTimer();
 
-          if (error) {
+          if (error || results == null) {
             logger.error('Could not get blocks from redis %s', JSON.stringify(error));
             callback(true);
             return;
@@ -487,6 +487,8 @@ function SetupForPool(poolOptions, setupFinished) {
                   if (workerInfo.length === 2) {
                     //todo validate by daemon
 	            // KTHXFIX-1-VALIDATION													*!*!!*!*!*!*!*!*!**!*!*!*!!**!*!*!*!*!*!**!*!*!*!*!*!**
+	                 
+	                 let address = workerInfo[0];
 	                    
                     if (resultForRound[address]) {
                     	
@@ -500,7 +502,7 @@ function SetupForPool(poolOptions, setupFinished) {
                       
                     }
 
-                    let address = workerInfo[0];
+                    
                     if (resultForRound[address]) {
                       logger.silly("Already have balance for address %s : %s", address, resultForRound[address].toString(10));
                       resultForRound[address] = resultForRound[address].plus(roundShare[workerStr]);
@@ -690,19 +692,19 @@ function SetupForPool(poolOptions, setupFinished) {
           });
 
 
-          /* THIS WILL CHARGE PORTION OF TXFEES TO POOL */
+/*        // THIS WILL CHARGE PORTION OF TXFEES TO POOL 
           Object.keys(addressAmounts).forEach((address) => {
               feeAddresses.push(address);// = new BigNumber(0.00000000);
-          });
+          });*/
 
 //          Object.keys(rewardAddresses).forEach((rewardaddy) => {
 //            addressAmounts[rewardaddy] = 0.00000000;
 //          });
             
-          /* LIST EACH PAYEE AS PAYING FEES (WILL ADD CFG OPTION FOR THIS) */
+/*        // LIST EACH PAYEE AS PAYING FEES (WILL ADD CFG OPTION FOR THIS)
           Object.keys(rewardAddresses).forEach((feeaddy) => {
             feeAddresses.push(feeaddy);// = 0.0;
-          });
+          });*/
           
           
 

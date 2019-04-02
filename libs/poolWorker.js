@@ -215,9 +215,9 @@ module.exports = function() {
       var shareDataJsonStr = JSON.stringify(data);
 
       if (data.blockHash && !isValidBlock) {
-        logger.info('We thought a block was found but it was rejected by the daemon, share data: %s' + shareDataJsonStr);
+        logger.debug('We thought a block was found but it was rejected by the daemon, share data: %s' + shareDataJsonStr);
       } else if (isValidBlock) {
-        logger.info('Block found: %s', data.blockHash + ' by %s', data.worker);
+        logger.debug('Block found: %s', data.blockHash + ' by %s', data.worker);
       }
       if (isValidShare) {
         if (data.shareDiff > 1000000000) {

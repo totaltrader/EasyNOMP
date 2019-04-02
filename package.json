@@ -17,7 +17,7 @@
         "url": "https://github.com/leshacat/EasyNOMP/issues"
     },
     "license": "GPL-2.0",
-    "author": "Matthew Little",
+    "author": "LeshaCat",
     "contributors": [
         "devnulled",
         "foxer666",
@@ -57,9 +57,11 @@
         "moment": "^2.22.2",
         "multi-hashing": "git://github.com/leshacat/node-multi-hashing.git",
         "mysql": "^2.16.0",
+        "newrelic": "^5.6.3",
         "node-json-minify": "^1.0.0",
         "node-watch": "^0.5.5",
         "nonce": "^1.0.4",
+        "posix": "^4.1.2",
         "redis": "^2.7.1",
         "redis-commands": "^1.4.0",
         "request": "^2.88.0",
@@ -68,7 +70,7 @@
         "sma": "^0.1.1",
         "sshpk": "^1.15.1",
         "stratum-pool": "git://github.com/leshacat/node-stratum-pool.git",
-        "winston": "3.0.0-rc2",
+        "winston": "^3.2.1",
         "winston-daily-rotate-file": "^3.3.3"
     },
     "engines": {

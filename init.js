@@ -27,12 +27,12 @@ var portalConfig = JSON.parse(JSON.minify(fs.readFileSync("config.json", {encodi
 var poolConfigs;
 
 
-try {
+/*try {
     require('newrelic');
     if (cluster.isMaster)
         logger.debug('New Relic initiated');
 } catch (e) {
-}
+}*/
 
 
 //Try to give process ability to handle 100k concurrent connections
